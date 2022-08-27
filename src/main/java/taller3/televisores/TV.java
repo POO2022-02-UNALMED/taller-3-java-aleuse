@@ -12,7 +12,8 @@ public class TV {
 	//Constructor
 	public TV(Marca marca, boolean estado) {
 		this.setMarca(marca);
-		this.setEstado(estado);		
+		this.setEstado(estado);
+		TV.numTV ++;
 	}
 	
 	//Método get() para el canal
@@ -23,7 +24,9 @@ public class TV {
 	//Método set() para el canal
 	public void setCanal(int canal) {
 		if(this.getEstado()) {
-			this.canal = canal;
+			if(canal >= 1 & canal < 120)  {
+				this.canal = canal;
+			}
 		}
 	}
 	
